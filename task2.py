@@ -41,6 +41,15 @@ appropriate use of return values and input parameters
    # print(time.strftime("%H",t))
    # break
 
-letter = ["k","i", "m", 'm', "y", "s", "u", "c", "k", "s"]
-print (letter)
+letter = ['k','i', 'm', 'm', 'y', 's', 'u', 'c', 'k', 's']
 
+for i in letter:
+   while True:
+      inputL = str(input(f"Type this letter, {i}:    "))
+      if inputL == i:
+         break
+      else:
+         print ("try again. you messed up")
+
+t = time.time()  
+print (t)
