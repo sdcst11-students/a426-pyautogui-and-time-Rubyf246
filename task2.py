@@ -32,14 +32,14 @@ appropriate use of return values and input parameters
 # a variable. We will use it as the basis for this 
 # assignment.
 
-while True:
-    y = keyboard.read_key()
-    print(y)
-    print(time.time())
-    t = time.localtime()
-    print(t)
-    print(time.strftime("%H",t))
-    break
+#while True:
+   # y = keyboard.read_key()
+   # print(y)
+   # print(time.time())
+   # t = time.localtime()
+   # print(t)
+   # print(time.strftime("%H",t))
+   # break
 
 letter = ["k","i", "m", 'm', "y", "s", "u", "c", "k", "s"]
 print (letter)
