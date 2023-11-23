@@ -35,8 +35,12 @@ appropriate use of return values and input parameters
 while True:
     y = keyboard.read_key()
     print(y)
-    print(time.now())
+    print(time.time())
     t = time.localtime()
     print(t)
     print(time.strftime("%H",t))
     break
+
+letter = ["k","i", "m", 'm', "y", "s", "u", "c", "k", "s"]
+print (letter)
+
