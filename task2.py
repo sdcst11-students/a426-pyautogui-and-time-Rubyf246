@@ -1,6 +1,6 @@
 #!working with time
 
-import random
+import random 
 import keyboard
 import time
 
