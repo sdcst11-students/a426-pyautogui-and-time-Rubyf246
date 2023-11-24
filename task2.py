@@ -42,7 +42,7 @@ appropriate use of return values and input parameters
    # break
 
 letter = ['k','i', 'm', 'm', 'y', 's', 'u', 'c', 'k', 's']
-
+starttime = time.time()
 for i in letter:
    while True:
       inputL = str(input(f"Type this letter, {i}:    "))
@@ -50,6 +50,8 @@ for i in letter:
          break
       else:
          print ("try again. you messed up")
-
-t = time.time()  
-print (t)
+endtime= time.time()
+s= round(starttime, 3)
+e= round(endtime,3)
+eslaped= round((e-s),3)
+print (f"It took you {eslaped} seconds to complete the challenge.")

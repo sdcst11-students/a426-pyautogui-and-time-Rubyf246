@@ -20,24 +20,22 @@ example1.py
 Explain what it does. Give a brief summary of the program
 and explain the importance of each line.
 
-This program runs 
+This program below creates a list of alarms and check if each alarm has been triggered based on the specified delays.
 
-import time
+import time  ---- imports the "time" module
 
-# time can also be used to create a list of alarms
+alarms = [0,0,0] ----- creates a list called "alarms" with three values, 0. This list will store timestamps for each alarm when its triggered
+delays = [10,20,60] ----- creates a list called "delays" with threee values, 10, 20, 60. They represents the delay. 
+start = time.time() ------ gets the current time in seconds since the epoch and stores it in the variable, start.
+alarms[0] = start + delays[0] -
+alarms[1] = start + delays[1]  | -- these lines calculate and set the trigger times for each alarm based on the delays and the start time.
+alarms[2] = start + delays[2] -
 
-alarms = [0,0,0]
-delays = [10,20,60]
-start = time.time()
-alarms[0] = start + delays[0]
-alarms[1] = start + delays[1]
-alarms[2] = start + delays[2]
-
-while True:
-    for i in range(0,3):
-        now = time.time()
-        if now > alarms[i]:
-            print(f"alarm {i} {delays[i]} second alarm has been triggered because now ({round(now,3)}) > alarm {i} {round(alarms[i],3)}")
-            alarms[i] = now + delays[i]
-    time.sleep(1)
-    print(f"time elapsed is {round(time.time() - start,3)}")
+while True: ----- starts an infinite loop
+    for i in range(0,3): ----- starts a for loop that iterates over the range from 0 to 2. 
+        now = time.time() ---- the current times get set into the varible, now.
+        if now > alarms[i]: ----- checks if the current time is greater than the trigger time of the current alarm.
+            print(f"alarm {i} {delays[i]} second alarm has been triggered because now ({round(now,3)}) > alarm {i} {round(alarms[i],3)}") --- if it has, this line will print a message that tells which alarm has been triggered and the time.
+            alarms[i] = now + delays[i]  ----- updates the trigger time for the alarm 
+    time.sleep(1) ---- creates an one second interval between each iteration 
+    print(f"time elapsed is {round(time.time() - start,3)}") ---- prints the time since the beginning when when this program was ran
